@@ -24,4 +24,4 @@ jobs:
 
       - name: Deploy my app
         run: |
-          echo ${{ secrect.USER }}
+          echo ${{ secrects.USER }}
