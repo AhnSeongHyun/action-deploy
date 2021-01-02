@@ -1,10 +1,6 @@
 name: CD
 
-on:
-  push:
-    tags:
-      - 1.*.*
-      - 2.*.*
+on: [push]
 
 jobs:
   deploy:
