@@ -6,7 +6,6 @@ jobs:
   deploy:
     environment:
       name: production
-      user: ${{ secrets.USER }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
