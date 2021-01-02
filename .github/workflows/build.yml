@@ -15,8 +15,11 @@ jobs:
         id: deployment
         with:
           token: "${{ github.token }}"
-          environment: production
+          environment: production 
 
       - name: Deploy my app
+        environment:
+          name: production
+          user: ${{ secrets.USER }}
         run: |
           echo ${{ secrets.USER }}
