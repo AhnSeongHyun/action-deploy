@@ -14,4 +14,4 @@ jobs:
         with:
           ref: main
       - name: test
-        run : echo ${{ secrets.USER }}
+        run : echo ${{ secrets.production.USER }}
