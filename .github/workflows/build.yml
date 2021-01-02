@@ -23,5 +23,5 @@ jobs:
           environment: production
 
        - name: Deploy my app
-        run: |
-          echo ${{ secrect.USER }}
+         run: |
+           echo ${{ secrect.USER }}
