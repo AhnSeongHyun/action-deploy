@@ -22,6 +22,6 @@ jobs:
           target_url: http://my-app-url.com
           environment: production
 
-       - name: Deploy my app
-         run: |
-           echo ${{ secrect.USER }}
+      - name: Deploy my app
+        run: |
+          echo ${{ secrect.USER }}
