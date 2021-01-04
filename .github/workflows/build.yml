@@ -3,22 +3,13 @@ name: CD
 on: [push]
 
 jobs:
-  deploy:
-    environment:
-      name: production
+  deploy: 
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: main
-
-      - uses: chrnorm/deployment-action@releases/v1
-        name: Create GitHub deployment
-        id: deployment
-        with:
-          token: "${{ github.token }}"
-          environment: production 
+          ref: main 
 
       - name: Deploy my app
         run: |
-          echo ${{ secrets.USER }}
+          docker build -t deploy:dev .
